@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fourth Quarter Lessons</title>
+    <style>
+        body { font-family: Verdana, sans-serif; margin: 25px; padding: 25px; background-color: #e8f0fe; }
+        h1 { text-align: center; color: #333; }
+        .lesson { background: white; padding: 20px; margin: 20px 0; border-radius: 10px; box-shadow: 0 0 12px rgba(0,0,0,0.15); }
+        pre { background: #f0f0f0; padding: 12px; border-radius: 6px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>Fourth Quarter JavaScript Lessons</h1>
+    
+    <div class="lesson">
+        <h2>If Statement</h2>
+        <p>Enter "JavaScript" and press submit:</p>
+        <form name="example">
+            <input type="text" name="answer" value="">
+            <input type="button" name="answerbutton" value="SUBMIT" onclick="check()">
+        </form>
+        <script>
+        function check() {
+          if (document.example.answer.value=="JavaScript") {
+            document.write("Correct answer!");
+          } else {
+            document.write("Try again!");
+          }
+        }
+        </script>
+    </div>
+    
+    <div class="lesson">
+        <h2>If-Else Statement</h2>
+        <script>
+        var grade = 85;
+        document.write("Student Grade: " + grade + " - ");
+        if (grade >= 75) {
+          document.write("Congratulations, you passed!");
+        } else {
+          document.write("Unfortunately, you failed.");
+        }
+        </script>
+    </div>
+    
+    <div class="lesson">
+        <h2>Switch Statement</h2>
+        <p>Select a programming language:</p>
+        <form name="frmbook">
+            <select name="cmbbook">
+                <option value="1">Python</option>
+                <option value="2">JavaScript</option>
+                <option value="3">C++</option>
+                <option value="4">Java</option>
+            </select>
+            <input type="button" value="SUBMIT" onclick="bookcheck()">
+        </form>
+        <script>
+        function bookcheck() {
+          var book = document.frmbook.cmbbook.value;
+          switch (book) {
+            case "1": alert("Guido van Rossum"); break;
+            case "2": alert("Brendan Eich"); break;
+            case "3": alert("Bjarne Stroustrup"); break;
+            case "4": alert("James Gosling"); break;
+            default: alert("Unknown author");
+          }
+        }
+        </script>
+    </div>
+    
+    <div class="lesson">
+        <h2>For Loop</h2>
+        <script>
+        for (var i = 2; i <= 10; i+=2) {
+          document.write("Even Number: " + i + "<br>");
+        }
+        </script>
+    </div>
+    
+    <div class="lesson">
+        <h2>While Loop</h2>
+        <script>
+        var i = 3;
+        while (i <= 15) {
+          document.write("Step " + i + "<br>");
+          i+=3;
+        }
+        </script>
+    </div>
+    
+    <div class="lesson">
+        <h2>Break Statement</h2>
+        <script>
+        for (var i = 5; i <= 20; i++) {
+          if (i == 12) {
+            break;
+          }
+          document.write("Iteration: " + i + "<br>");
+        }
+        </script>
+    </div>
+</body>
+</html>
